@@ -123,17 +123,3 @@ while True:
 
 
 
-def add_students_to_specific_course(id_, course_):
-    for i in range(len(id_)):
-        if "student" in course_:
-            for j in range(len(course_["student"])):
-                if id_[i] == course_["student"][j]:
-                    print("student " + str(id_[i]) + " already in the course")
-                    i = i + 1
-                else:
-                    course_["student"].append(id_[i])
-        else:
-            course_["student"] = []
-            course_["student"].append(id_[i])
-    return course_
-
